@@ -26,7 +26,7 @@ final _content = TextEditingController();
 
    appBar: AppBar(centerTitle: true,backgroundColor: Color.fromARGB(255, 0, 107, 27),title: Text("The Fantabulous Page for the Magnificent JAMES"),),
       body: Center(
-     child: Column( crossAxisAlignment: CrossAxisAlignment.center ,mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [/*StreamBuilder<QuerySnapshot>(
+     child: Column( crossAxisAlignment: CrossAxisAlignment.center ,mainAxisAlignment: MainAxisAlignment.spaceAround,children: [/*StreamBuilder<QuerySnapshot>(
         stream: users.snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
