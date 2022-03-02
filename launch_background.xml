@@ -6,6 +6,8 @@
   <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/launch_image.jpg" />
+            android:src="@drawable/launch_image" />
+
+  </item>
 
 </layer-list>
