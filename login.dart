@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:fanpageapp/signup/signup.dart';
 import 'package:fanpageapp/Feed/RealFeed.dart';
 import 'package:fanpageapp/user.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
 class LoginPage extends StatelessWidget {
   LoginPage({ Key? key }) : super(key: key);
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -70,7 +72,10 @@ ElevatedButton(onPressed: (){
 Navigator.push(context, MaterialPageRoute(builder:(context) =>  signuppage()));
 
 }, child: const Text("Register")),
-//TextButton(onPressed: (){}, child: const Text("Forgot Password"))
+TextButton(onPressed: (){ 
+_handleSignIn();
+
+}, child: const Text("Sign in with Google"))
       ],)
       
       
@@ -125,7 +130,19 @@ Navigator.push(context, MaterialPageRoute(builder:(context) =>  signuppage()));
 
   
 }
-
+GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly',
+  ],
+);
+Future<void> _handleSignIn() async {
+  try {
+    await _googleSignIn.signIn();
+  } catch (error) {
+    print(error);
+  }
+}
 
 
 }

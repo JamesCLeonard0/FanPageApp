@@ -1,4 +1,4 @@
-name: Fan Page App
+name: fanpageapp
 description: James Leonard Mads
 
 # The following line prevents the package from being accidentally published to
@@ -33,6 +33,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^3.3.7
   firebase_core: ^1.12.0
+  google_sign_in: ^5.2.4
  
 
 
